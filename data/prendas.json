@@ -1,0 +1,48 @@
+{
+    "Clothes":[
+        {
+            "name":"Prince Jacket",
+            "description":"It's a Termodinamic Jacket for ",
+            "price":"49.99",
+            "img":{
+                "img1":"https://i.ibb.co/rsX44TT/prenda-1-1.jpg",
+                "img2":"https://i.ibb.co/HGp45T1/prenda-1-2.jpg",
+                "img3":"https://i.ibb.co/wQx8gvG/prenda-1-3.jpg",
+                "img4":"https://i.ibb.co/3hQb1YM/prenda-1-4.jpg"
+            }
+        },
+        {
+            "name":"Prince Sweater",
+            "description":"Sweater",
+            "price":"79.99",
+            "img":{
+                "img1":"https://i.ibb.co/pK69WDx/prenda-2-1.jpg",
+                "img2":"https://i.ibb.co/tYx9MKs/prenda-2-2.jpg",
+                "img3":"https://i.ibb.co/tC632C3/prenda-2-3.jpg",
+                "img4":"https://i.ibb.co/mq5CNDZ/prenda-2-4.jpg"
+            }
+        },
+        {
+            "name":"Lov-fi Hoddie",
+            "description":"",
+            "price":"78.99",
+            "img":{
+                "img1":"https://i.ibb.co/LrFpT7d/prenda-3-1.jpg",
+                "img2":"https://i.ibb.co/prwFjjD/prenda-3-2.jpg",
+                "img3":"https://i.ibb.co/86mnRNm/prenda-3-3.jpg",
+                "img4":"https://i.ibb.co/g7CH3hx/prenda-3-4.jpg"
+            }
+        },
+        {
+            "name":"Fresh T-shirt",
+            "description":"",
+            "price":"41.99",
+            "img":{
+                "img1":"https://i.ibb.co/0fZnpRn/prenda-4-1.jpg",
+                "img2":"https://i.ibb.co/P1xB8jL/prenda-4-2.jpg",
+                "img3":"https://i.ibb.co/ZzY5Ymk/prenda-4-3.jpg",
+                "img4":"https://i.ibb.co/6BQ3WwG/prenda-4-4.jpg"
+            }
+        }
+    ]
+}
