@@ -1,21 +1,20 @@
 import getData from "./getData.js"
 // import {showData} from './showData.js'
 
-const urlPaises = 'https://clothsapi.herokuapp.com/Cloths/';
+const url = 'https://clothsapi.herokuapp.com/Cloths/';
 
-let paises
+let ropa
 document.addEventListener('DOMContentLoaded', async () => {
-    const data = await getData(urlPaises);
-    paises = data
+    const data = await getData(url);
+    ropa = data
     console.log(data)
-    pintarCartas(paises)
+    pintarCartas(ropa)
 })
 
 let divCartas = document.getElementById('cartas');
 
 function pintarCartas(data) {
-    console.log(paises)
-    
+    console.log(ropa)
     divCartas.innerHTML = ''
     data.forEach(element => {
         const { name, img, price, description} = element;
@@ -27,18 +26,31 @@ function pintarCartas(data) {
             </div>
             <div class="card-body">
             <h5 class="card-title">${name}</h5>
-            <p class="card-text fw-bold fs-3">${price}$<button class="btn btn-dark float-end agregar" type="button" value="${name}" id="agregar">Ver más</button></p>
+            <p class="card-text fw-bold fs-3">${price}$<button class="btn btn-dark float-end agregar2" id="${name}">Ver más</button></p>
             </div>
         </div>
         `
     });
 }
-let verMas = document.getElementById('agregar');
-// console.log(verMas);
-verMas.addEventListener("click", hola());
 
-function hola() {
-    console.log('hi dev')
-}
+const element = document.querySelector('.cartas');
+
+element.addEventListener('click', async(e) => {
+    console.log('hola')
+    const btnDetail = e.target.classList.contains('agregar2');
+    const name = e.target.id;
+    console.log(btnDetail, name);
+    if(btnDetail){
+         const lista = await getData(url);
+         const objeto = lista.find(list => list.name === name)
+         localStorage.setItem("Detalle",JSON.stringify(objeto));
+         window.location.href = "./detalles.html"
+    }
+
+    
+
+})
+
+
 
 
