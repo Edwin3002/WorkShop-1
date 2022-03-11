@@ -1,0 +1,16 @@
+#container-dataBase{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    grid-auto-rows: 320px;
+    grid-gap: 6rem;
+    justify-content: center;
+}
+
+.card{
+ border: 1px solid #e4e4e4;
+box-shadow: 8px 8px 5px #c0c0c09b;
+height: 55vh;
+flex-direction: column;
+text-align: center;
+margin: 10px;
+}
