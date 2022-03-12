@@ -26,7 +26,7 @@ function pintarCartas(data) {
           <h5 class="card-title">${name}</h5>
           <p class="card-text">${price}</p>
           
-          <a href="#"><button id="${name}" class="btn btn-primary agregar2">Agregar carrito</button></a>
+          <a href="#"><button id="${name}" class="btn btn-primary agregar2">Ver detalle</button></a>
   
 
         </div>
