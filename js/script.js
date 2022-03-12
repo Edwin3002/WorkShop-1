@@ -19,16 +19,18 @@ function pintarCartas(data) {
     data.forEach(element => {
         const { name, img, price, description} = element;
         cartas.innerHTML += `
-                <div class="card" style="width: 18rem;">
-            <div class="mosaico">
+        <div class="card" style="width: 15rem;">
+        
+        <img src="${img.img1}" width="500" height="200" class="card-img-top" alt="..." style="width:10rem; border:3px solid black; margin-left:2.5rem; margin-top:1rem;">
+        <div class="card-body">
+          <h5 class="card-title">${name}</h5>
+          <p class="card-text">${price}</p>
+          
+          <a href="#"><button id="${name}" class="btn btn-primary agregar2">Agregar carrito</button></a>
+  
 
-                <img src="${img.img1}" class="card-img-top" alt="...">
-            </div>
-            <div class="card-body">
-            <h5 class="card-title">${name}</h5>
-            <p class="card-text fw-bold fs-3">${price}$<button class="btn btn-dark float-end agregar2" id="${name}">Ver más</button></p>
-            </div>
         </div>
+      </div>
         `
     });
 }

@@ -5,23 +5,57 @@ const getLocalStorage = () => {
     const { name, description, img, price } = det;
     console.log(det)
     carta.innerHTML += `
-    <div class="card cardSola mb-3" style="max-width: 98%;">
-        <div class="row g-0">
-        <div class="col-md-4 mosaico2">
-            <img src="${img.img3}" class="card-img-top" alt="...">
-        </div>
-        <div class="col-md-8 d-flex align-items-center">
-            <div class="card-body">
-            <h2 class="card-title text-uppercase">${name}</h2>
-
-            <p class="card-text fs-3 fw-bold">${price}$</p>
-            <p class="card-text fs-3 resumen">${description}</p>
-            <p class="card-text d-flex flex-row-reverse">  <button class="btn btn-dark " type="button" id="agregar">Agregar <i class="fas fa-shopping-cart"></i></button> <input id="nCantidad"  type="number" value="1"></p>
-            <a href="productos.html"> <button class="btn btn-danger " type="button" id="volver">Volver <i class="fa-solid fa-arrow-rotate-left"></i></button><a>
+    <section class="featured" id="featured">
+    <div class="row">
+        <div class="image-container">
+            <div class="small-image">
+                <img src="${img.img1}" class="featured-image-1" alt="">
+                <img src="${img.img2}" class="featured-image-1" alt="">
+                <img src="${img.img3} "class="featured-image-1" alt="">
+                <img src="${img.img4}" class="featured-image-1" alt="">
+            </div>
+            <div class="big-image">
+                <img src="${img.img1}" class="big-image-1" alt="">
             </div>
         </div>
+        <div class="content">
+            <h3 id=" titulo-cloths">${name} </h3>
+
+            <p> ${description}</p>
+            <div class="price">${price} $</div></div>
+            <p class="size">size</p>
+<div id="sizes">
+ <input type="text" class="redondeado" value="S">
+<input type="text" class="redondeado" value="M">
+<input type="text" class="redondeado" value="L">
+<input type="text" class="redondeado" value="XL">
+</div>
+            <!-- <button type="button" class="btn btn-primary">ADD TO CARD</button>
+           <button type="button" class="btn btn-dark">BUY IT NOW</button> -->
+<a href="#" class="btn">add to cart</a>
+<a href="#" class="btn2">add to cart</a>
+
         </div>
     </div>
+</section>
+<!-- Publicidad -->
+  <section class="publicidad">
+            <div class="box-container">
+            </div>
+        </section>
+<!-- Footer-->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Principe Fresco</h3>
+        </div>
+
+        <div class="box">
+            <h3>nombre</h3>
+          
+        </div>
+    </div>
+</section>
     `
 }
 
@@ -36,30 +70,31 @@ document.addEventListener('DOMContentLoaded', getLocalStorage)
 // })
 
 
+// Slider comienza con imagen principal desde 0
+let slides = document.querySelectorAll('.slide-container');
+let index = 0;
 
 
-function pintarSola(name) {
-    console.log(name)
-    let resultado = API.filter(cat => cat.nombre == name)
-    resultado.forEach(element => {
-        const { nombre, resumen, img, precio, categoria } = element;
-        space.innerHTML = `
-        <div class="card cardSola mb-3" style="max-width: 98%;">
-        <div class="row g-0">
-        <div class="col-md-4 mosaico2">
-            <img src="${img}" class="card-img-top" alt="...">
-        </div>
-        <div class="col-md-8 d-flex align-items-center">
-            <div class="card-body">
-            <h2 class="card-title text-uppercase">${nombre}</h2>
 
-            <p class="card-text fs-3 fw-bold">${precio}$</p>
-            <p class="card-text fs-3 resumen">${resumen}</p>
-            <p class="card-text d-flex flex-row-reverse">  <button class="btn btn-dark " type="button" id="agregar" onclick="guardarCarrito('${nombre}', '${precio}')">Agregar <i class="fas fa-shopping-cart"></i></button> <input id="nCantidad"  type="number" value="1"></p>
-            </div>
-        </div>
-        </div>
-    </div>
-    `
-    });
-}
+document.querySelectorAll('.featured-image-1').forEach(image_1 =>{
+  image_1.addEventListener('click', () =>{
+    var src = image_1.getAttribute('src');
+    document.querySelector('.big-image-1').src = src;
+  });
+});
+
+document.querySelectorAll('.featured-image-2').forEach(image_2 =>{
+  image_2.addEventListener('click', () =>{
+    var src = image_2.getAttribute('src');
+    document.querySelector('.big-image-2').src = src;
+  });
+});
+
+document.querySelectorAll('.featured-image-3').forEach(image_3 =>{
+  image_3.addEventListener('click', () =>{
+    var src = image_3.getAttribute('src');
+    document.querySelector('.big-image-3').src = src;
+  });
+});
+
+
